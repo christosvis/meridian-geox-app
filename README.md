@@ -11,7 +11,7 @@ source geox-app-venv/bin/activate
 streamlit run streamlit_app.py
 ```
 
-Open http://localhost:8501. Load a Google sample on **Data**, then **Run design**
+Load a Google sample on **Data**, then **Run design**
 (explicit button — search is slow). Analysis needs a saved design plus a panel
 that includes the test window.
 
@@ -24,24 +24,11 @@ that includes the test window.
 | Analysis | TBR + optional cooldown window + Meridian ROI prior export |
 | Compare | `compare_designs` and optional `concat_design_reports` |
 
-**Compare vs concatenate:** Compare re-runs several `DesignConfig`s on the same
-panel and ranks them. Concatenate only merges *already computed* `DesignSet`s
-(e.g. last Design run + a comparison). Both live on Compare — concatenate is
-not a separate workflow.
-
-**SDID** is in the GeoX 1.0.0 enum (`Methodology.SDID`) but there is no estimator
-(`methodology/sdid.py` is missing). The app always uses TBR.
-
-**Cooldown:** GeoX `AnalysisConfig` has no cooldown field. The app extends
-`analysis_end_date` so post-test days are still treated vs BAU control.
 
 **Meridian priors:** Analysis exports iCPD, spend, and dates for
 [CalibrationBuilder](https://developers.google.com/meridian/docs/advanced-modeling/set-custom-priors-past-experiments)
-in **meridian-venv** (do not install `google-meridian` here). Holdback matches
+in **meridian-venv**. Holdback matches
 Meridian’s zero-spend ROI estimand better than go-dark / heavy-up.
-
-Interactive defaults use fewer candidates than the Colab (`n_candidates=5_000`
-vs 100k) so a click finishes on a laptop. Expand **Search budget** for Colab-scale.
 
 ## Docs
 
