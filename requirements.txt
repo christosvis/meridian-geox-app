@@ -1,0 +1,8 @@
+meridian-geox>=1.0.0
+absl-py>=2.0
+streamlit>=1.45
+pandas>=2.2
+numpy>=1.26
+matplotlib>=3.8
+plotly>=5.18
+pytest>=8.0

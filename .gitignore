@@ -1,0 +1,16 @@
+.venv/
+geox-app-venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.mplconfig/
+.streamlit/secrets.toml
+outputs/*
+!outputs/.gitkeep
+!outputs/designs/
+!outputs/designs/.gitkeep
+outputs/designs/*.json
+!outputs/analysis/
+!outputs/analysis/.gitkeep
+outputs/analysis/*.pkl
