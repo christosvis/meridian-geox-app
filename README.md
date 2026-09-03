@@ -1,23 +1,8 @@
 # Meridian GeoX app
 
-Streamlit workbench for [Google Meridian GeoX](https://developers.google.com/meridian/geox/intro-to-geox):
+Streamlit app for [Google Meridian GeoX](https://developers.google.com/meridian/geox/intro-to-geox):
 load a geo-day panel, design a single- or multi-cell test, then analyze lift (TBR).
 
-Isolated env **`geox-app-venv`**. Do not add GeoX to marketing-ax Poetry or reuse
-`meridian-venv` (MMM) / `geox-venv` (notebook sandbox).
-
-## Setup
-
-```bash
-cd christos-analyses/meridian-geox-app
-python3 -m venv geox-app-venv
-source geox-app-venv/bin/activate
-pip install -U pip
-pip install -r requirements.txt
-python scripts/download_samples.py
-```
-
-`absl-py` is required at runtime even though PyPI lists it only under GeoX `dev`.
 
 ## Run
 
